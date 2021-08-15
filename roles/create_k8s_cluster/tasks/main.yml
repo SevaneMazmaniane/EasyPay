@@ -23,7 +23,8 @@
     kops update cluster \
     --name {{ cluster_name }} \
     --state s3://{{ bucket_name }} \
-    --yes
+    --yes \
+    --admin
 
 - name: Sleep for 5 minutes until cluster creation is done
   wait_for:
