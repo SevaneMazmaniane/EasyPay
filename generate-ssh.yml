@@ -5,9 +5,6 @@
   vars:
     ssh_key_filename: ctgkube
 
-#  vars_prompt:
-#    - name: "ssh_passphrase"
-#      prompt: "Enter the passphrase for the SSH key"
   tasks:
     - name: generate SSH key "{{ssh_key_filename}}"
       user:
@@ -16,5 +13,4 @@
         ssh_key_type: rsa
         ssh_key_bits: 4096
         ssh_key_file: .ssh/{{ssh_key_filename}}
-        #ssh_key_passphrase: "{{ssh_passphrase}}"
         force: no
