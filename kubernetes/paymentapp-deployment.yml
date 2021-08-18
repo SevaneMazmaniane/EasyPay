@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-app
+  labels:
+    app: payment-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment-app
+  template:
+    metadata:
+      labels:
+        app: payment-app
+    spec:
+      containers:
+        - name: payment-app
+          image: ctgraves16/paymentapp-python:1.0.0
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: Always

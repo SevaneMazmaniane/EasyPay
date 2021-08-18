@@ -1,0 +1,18 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: payment-app-ingress
+  annotations:
+spec:
+  rules:
+  - host: easypay.ctgkube.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: payment-app-svc
+            port:
+              number: 8080

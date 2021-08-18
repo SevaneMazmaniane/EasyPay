@@ -1,10 +1,10 @@
 #####################
 # ~~ Domain name ~~ #
-cluster_name: example.ctgkube.com
+cluster_name: ctgkube.com
 
 ##########################
 # ~~ Kops state store ~~ #
-bucket_name: example-store
+bucket_name: ctgadget-kops-store
 
 ###############################################
 # ~~ SSH public key to acces Kubernetes API ~~#

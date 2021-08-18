@@ -12,7 +12,7 @@
       "Sid": "",
       "Effect": "Allow",
       "Principal": {
-        "AWS": "arn:aws:iam::308800087264:role/nodes.example.ctgkube.com"
+        "AWS": "arn:aws:iam::308800087264:role/nodes.ctgkube.com"
       },
       "Action": "sts:AssumeRole"
     }
