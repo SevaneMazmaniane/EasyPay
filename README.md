@@ -1,2 +1,2 @@
 # ansible-kops
-This repository cotains all the configuration to configure and deploy a Kubernetes cluster on AWS.
+This repository contains all the files needed to configure and deploy an application onto a Kubernetes cluster hosted by AWS.
