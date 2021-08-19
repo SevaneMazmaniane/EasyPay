@@ -5,6 +5,25 @@ set -o nounset
 
 IFS=$(printf '\n\t')
 
+###############################
+# AWS CLI v2 Installer script #
+###############################
+sudo apt update
+sudo apt install unzip
+sudo curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+sudo unzip awscliv2.zip
+sudo ./aws/install
+aws --version
+printf '\nAWS CLI v2 installed successfully\n\n'
+
+############################################
+# Ansible and AWS Python libraries via pip #
+############################################
+sudo apt update
+sudo apt install python3-pip
+python3 -m pip install --upgrade pip
+python3 -m pip install ansible boto boto3 --user
+
 ##########
 # Docker #
 ##########
