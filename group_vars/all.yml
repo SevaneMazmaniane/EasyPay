@@ -8,7 +8,7 @@ bucket_name: ctgadget-kops-store
 
 ###############################################
 # ~~ SSH public key to acces Kubernetes API ~~#
-#ssh_pub_key: ~/.ssh/id_rsa.pub
+# Enter the full path with the name of the SSH public key created by the generate-ssh-key.yml file.
 ssh_pub_key: ~/.ssh/ctgkube.pub
 
 ########################################
