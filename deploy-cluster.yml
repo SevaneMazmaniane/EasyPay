@@ -30,8 +30,8 @@
   roles:
   - deploy_helm
   - deploy_kube2iam
-#  - deploy_externaldns
-#  - deploy_ingressnginx
-#  - deploy_certmanager
+  - deploy_externaldns
+  - deploy_ingressnginx
+  - deploy_certmanager
 #  - deploy_varnish
 #  - deploy_wordpress

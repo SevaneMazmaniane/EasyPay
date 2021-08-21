@@ -1,6 +1,16 @@
+- name: Add ingress NGINX
+  shell: |
+    helm repo nginx-ingress ngress-nginx https://kubernetes.github.io/ingress-nginx
+  ignore_errors: true
+
+- name: Update the repo...
+  shell: |
+    helm repo update
+  ignore_errors: true
+
 - name: Deploy ingress NGINX
   shell: |
-    helm install nginx-ingress stable/nginx-ingress \
+    helm install nginx-ingress ingress-nginx/ingress-nginx \
     --namespace kube-system \
     --set controller.publishService.enabled=true
   ignore_errors: true
