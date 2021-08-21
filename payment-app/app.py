@@ -41,7 +41,7 @@ def get_all_payments():
 
 # POST Method to collect a user's payment
 @app.route("/payments", methods=["POST"])
-def collect_payment():
+def add_payment():
     data = request.get_json(force=True)
     db.payment.insert_one({"payment": data["payment"]})
     return jsonify(
@@ -50,7 +50,7 @@ def collect_payment():
 
 # PUT Method to update a user's payment
 @app.route("/payments/<id>", methods=["PUT"])
-def update_task(id):
+def update_payment(id):
     data = request.get_json(force=True)["payment"]
     response = db.payment.update_one({"_id": ObjectId(id)}, {"$set": {"payment": data}})
     if response.matched_count:
@@ -63,7 +63,7 @@ def update_task(id):
 
 # DELETE Method to delete a user's payment
 @app.route("/payments/<id>", methods=["DELETE"])
-def delete_task(id):
+def delete_payment(id):
     response = db.payment.delete_one({"_id": ObjectId(id)})
     if response.deleted_count:
         message = "Payment deleted successfully!"
@@ -71,6 +71,14 @@ def delete_task(id):
         message = "No Payments were found!"
     return jsonify(
         message=message
+    )
+
+# POST Method to delet all payment data
+@app.route("/payments/delete", methods=["POST"])
+def delete_all_payments():
+    db.payment.remove()
+    return jsonify(
+        message="All Payments deleted!"
     )
 
 # The app server will be able to run locally at port 5000
