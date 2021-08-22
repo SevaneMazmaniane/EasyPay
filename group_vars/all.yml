@@ -38,14 +38,3 @@ worker_node_count: 3
 ############################################
 # ~~ Let's encrypt domain's email owner ~~ #
 email_owner: chaance.graves@ctginnovations.io
-
-#########################
-# ~~ Wordpress block ~~ #
-
-# Use maintenance-svc to enable maintenance mode
-# Default to varnish service varnish-svc (uncomment to activate)
-# wordpress_service: maintenance-svc
-
-# (probably should move this block to ansible role deploy_wordpress)
-#wordpress_host: wordpress
-#wordpress_bucket_name: ctgadget-wordpress-unique-bucket
