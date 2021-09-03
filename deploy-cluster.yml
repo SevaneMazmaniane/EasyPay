@@ -25,7 +25,6 @@
   tags: deploy
   vars_files:
     - group_vars/all.yml
-    - group_vars/secrets.yml
 
   roles:
   - deploy_helm
