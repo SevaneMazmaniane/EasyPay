@@ -1,3 +1,3 @@
-kubectl_version: "v1.21.3"
+kubectl_version: "v1.23.5"
 kubectl_download_path: "https://storage.googleapis.com/kubernetes-release/release/{{ kubectl_version }}/bin/linux/amd64"
 kubectl_darwin_download_path: "https://storage.googleapis.com/kubernetes-release/release/{{ kubectl_version }}/bin/darwin/amd64"
